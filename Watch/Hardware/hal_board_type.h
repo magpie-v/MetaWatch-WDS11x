@@ -32,7 +32,7 @@
 
 /******************************************************************************/
 
-#define VERSION_STRING "0.8.2"
+#define VERSION_STRING "0.8.3a"
 
 /* create the main page for the Doxygen output */
 
