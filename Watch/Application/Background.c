@@ -591,7 +591,7 @@ void InitializeRstNmiConfiguration(void)
 {
   /****************************************************************************/
   
-  nvRstNmiConfiguration = RST_PIN_DISABLED;
+  nvRstNmiConfiguration = RST_PIN_ENABLED;
   OsalNvItemInit(NVID_RSTNMI_CONFIGURATION, 
                  sizeof(nvRstNmiConfiguration), 
                  &nvRstNmiConfiguration);
