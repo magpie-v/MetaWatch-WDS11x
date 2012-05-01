@@ -155,7 +155,7 @@ static unsigned char nvDateFormat;
 
 void InitializeTimeFormat(void)
 {
-  nvTimeFormat = TWELVE_HOUR;
+  nvTimeFormat = TWENTY_FOUR_HOUR;
   
   OsalNvItemInit(NVID_TIME_FORMAT, 
                  sizeof(nvTimeFormat), 
@@ -166,7 +166,7 @@ void InitializeTimeFormat(void)
 
 void InitializeDateFormat(void)
 {
-  nvDateFormat = MONTH_FIRST;
+  nvDateFormat = DAY_FIRST;
   
   OsalNvItemInit(NVID_DATE_FORMAT, 
                  sizeof(nvDateFormat), 
