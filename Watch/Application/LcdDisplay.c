@@ -1969,8 +1969,12 @@ static void DisplayDayOfWeek(void)
   int DayOfWeek = GetRTCDOW();
   
   unsigned char const *pFoo = DaysOfWeek[DayOfWeek];
+  
+  int pos = 10;
+  if ( GetTimeFormat() == TWENTY_FOUR_HOUR )
+    pos = 0;
     
-  WriteFoo(pFoo,10,8);
+  WriteFoo(pFoo,pos,8);
   
 }
 
@@ -2010,14 +2014,28 @@ static void DisplayDate(void)
       First = GetRTCDAY();
       Second = GetRTCMON();
     }
+  
+    int pos = 20;
+    if ( GetTimeFormat() == TWENTY_FOUR_HOUR )
+    {
+      pos = 10;
+      
+      int year = GetRTCYEAR();
+      int xPos = 11;
+      while (year > 0) {
+        /* shift bit so that it lines up with Day of Week and Date */
+        WriteSpriteDigit(year%10,20,xPos--,-1);
+        year /= 10;
+      }
+    }
     
-    /* shift bit so that it lines up with AM/PM and Day of Week */
-    WriteSpriteDigit(First/10,20,8,-1);
+    /* shift bit so that it lines up with AM/PM (or Year) and Day of Week */
+    WriteSpriteDigit(First/10,pos,8,-1);
     /* shift the bits so we can fit a / in the middle */
-    WriteSpriteDigit(First%10,20,9,-1);
-    WriteSpriteDigit(Second/10,20,10,1);
-    WriteSpriteDigit(Second%10,20,11,0);
-    DisplayDataSeparator(20,9);
+    WriteSpriteDigit(First%10,pos,9,-1);
+    WriteSpriteDigit(Second/10,pos,10,1);
+    WriteSpriteDigit(Second%10,pos,11,0);
+    DisplayDataSeparator(pos,9);
   }
 }
 
