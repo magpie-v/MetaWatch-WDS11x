@@ -8,7 +8,7 @@ NextState1=0
 Break=3
 State Storage=0
 [DebugChecksum]
-Checksum=-1285712661
+Checksum=446326237
 [DisAssemblyWindow]
 NumStates=_ 1
 State 1=_ 1
@@ -16,20 +16,6 @@ State 1=_ 1
 Enabled=_ 0
 [CodeCoverage]
 Enabled=_ 0
-[Log file]
-LoggingEnabled=_ 0
-LogFile=_ ""
-Category=_ 0
-[TermIOLog]
-LoggingEnabled=_ 0
-LogFile=_ ""
-[CallStackLog]
-Enabled=0
-[DriverProfiling]
-Enabled=0
-Mode=180428890
-Graph=0
-Symbiont=0
 [Stack]
 FillEnabled=0
 OverflowWarningsEnabled=1
@@ -40,6 +26,25 @@ UseTrigger=1
 TriggerName=main
 LimitSize=0
 ByteLimit=50
+[Log file]
+LoggingEnabled=_ 0
+LogFile=_ ""
+Category=_ 0
+[TermIOLog]
+LoggingEnabled=_ 0
+LogFile=_ ""
+[CallStack]
+ShowArgs=0
+[Disassembly]
+MixedMode=1
+[CallStackLog]
+Enabled=0
+[DriverProfiling]
+Enabled=0
+Mode=0
+Graph=0
+Symbiont=0
+Exclusions=
 [Breakpoints]
 Count=0
 [FET]
@@ -63,5 +68,7 @@ SR=0
 all registers=0
 File name=
 [Aliases]
-Count=0
-SuppressDialog=0
+A0=_ "C:\DevelopmentAH\MW-WDS11x-Gamma\Stack\Bluetopia\btpskrnl\BTPSKRNL.c" ""
+A1=_ "C:\DevelopmentAH\MW-WDS11x-Gamma\Stack\Hardware\hal_bluetooth_uart.c" ""
+Count=2
+SuppressDialog=1
